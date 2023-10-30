@@ -17,7 +17,7 @@ export default class StringSchema extends BaseSchema {
     const validator = (v) => v.length === len;
     return new StringSchema([...this.validators, validator]);
   }
-  
+
   hasExclamation() {
     const validator = (v) => v.match(/[!]/g) != null;
     return new StringSchema([...this.validators, validator]);
